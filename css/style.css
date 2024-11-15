@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+/*
+google fonts sådan
+
+.sigmar-regular {
+  font-family: "Sigmar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* --------ALT ER SKALERET TIL TABLET(768px) & MOBIL (600px)---------- */
+
+/* style css computer */
+header {
+    background-color: #20291c;
+    color: white;
+    padding: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 10; /* Højere z-index for at være over billedet */
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.logo-container img {
+    max-width: 250px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-container img {
+    width: 400px;
+    height: auto;
+}
+
+/* Responsiv styling */
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .logo-container img {
+        max-width: 400px; /* Endnu mindre logo på mobil */
+        margin-top: 160px; /* Flytter logoet endnu længere ned */
+    }
+}
+
+/* Søgeikon styling */
+.søgeikon {
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    width: 250px;
+}
+
+.søgeikon img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    background-color: #8aa06a;
+}
+
+
+
+/* Stil til Blade2 billede */
+.Blade2 img {
+    width: 100%;
+    position: relative;
+    top: -330px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero sektion styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#Givskud_Zoo_baggrundsvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 90%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    font-size: 28px;
+    font-family: "Sigmar", sans-serif;
+    color: white;
+    margin-top: -250px;
+    transition: all 0.3s ease;
+}
+
+.hero-overlay h2 {
+    margin: 0;
+    font-size: 70px;
+    font-family: "Sigmar", sans-serif;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+/* Responsiv styling */
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 20px;
+        margin-top: -300px;
+    }
+    .hero-overlay h2 {
+        font-size: 50px;
+    }
+}
+
+/* Små mobiler */
+@media (max-width: 600px) {
+    .hero-overlay h1 {
+        font-size: 18px;
+        margin-top: -220px;
+    }
+    .hero-overlay h2 {
+        font-size: 40px;
+    }
+}
+
+/* Fuldbredde firkant */
+.full-width-box {
+    width: 100%;
+    height: 900px;
+    background-color: #8aa06a;
+    margin-top: -400px;
+}
+
+/* Stil til billed-knappen "Se Åbningstider" */
+.se_åbningstider {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin-top: -60px;
+}
+
+.se_åbningstider img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+/* Mobiler */
+@media (max-width: 600px) {
+    .se_åbningstider img {
+        width: 100px; /* Mindre bredde på små skærme */
+        margin-top: -100px;
+    }
+}
+/* Hover-effekt på billed-knappen */
+.se_åbningstider img:hover {
+    transform: scale(1.1);
+}
+
+.burger {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 40px;
+    font-size: 40px;
+    color: var(--hvid);
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    color: #f6f6f6;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    border: 10px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+    border-radius: 10px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.burger i:hover ul {
+    opacity: 1;
+    transform: all 1s ease;
+}
+
+.dropdown ul li {
+    padding: 5px 40px;
+}
+
+.dropdown ul li a {
+    font-family: "Sigmar", sans-serif;
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.burger:hover .dropdown {
+    display: flex;
+}
+
+.dropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Fuldbredde boks styling */
+.full-width-box {
+    background-color: #8aa06a; /* Grøn baggrund */
+    padding: 0; /* Fjern indre padding */
+    margin: 0; /* Fjern ydre margin */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -335px;
+    height: 1100px;
+}
+
+/* Indhold i boksen */
+.content-wrapper {
+    max-width: 1200px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Sigmar', sans-serif;
+}
+
+/* Sektionens overskrift */
+.content-wrapper h2 {
+    font-size: 52px;
+    margin-bottom: 30px;
+    margin-top: 290px;
+    font-family: "Sigmar", sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Responsiv styling */
+
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .content-wrapper h2 {
+        font-size: 36px; /* Yderligere nedskalering af tekst */
+        margin-top: 880px; /* Yderligere afstand fra toppen */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .content-wrapper h2 {
+        font-size: 28px; /* Endnu mindre tekststørrelse */
+        margin-top: 600px; /* Mere afstand fra toppen */
+    }
+}
+
+
+/* Layout for tekst og billede */
+.section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+/* Billede */
+.section-image {
+    width: 43%;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Tekst i sektionen */
+.section-content p {
+    width: 45%;
+    font-size: 28px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+/* Responsiv styling */
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .section-content p {
+        width: 60%; /* Øger bredden yderligere */
+        font-size: 22px; /* Mindre tekststørrelse */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .section-content p {
+        width: 80%; /* Gør teksten næsten fuldbredde */
+        font-size: 20px; /* Endnu mindre tekst */
+    }
+}
+
+/* Billede */
+.section-image1 {
+    width: 43%;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 300px;
+}
+
+/* Responsiv styling */
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .section-image1 {
+        width: 100%; /* Bevarer fuld bredde på mindre skærme */
+        max-width: 1000px; /* Bevarer størrelsen på tablets */
+        margin-top: 40px; /* Juster margin-top som nødvendigt */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .section-image1 {
+        width: 100%; /* Fylder hele bredden på mobil */
+        max-width: 600px; /* Beholder samme størrelse */
+        margin-top: 20px; /* Juster margin-top hvis nødvendigt */
+    }
+}
+
+/* Tekst i spejlvendt sektion */
+.reverse-layout p {
+    width: 43%;
+    font-size: 26px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: -280px; /* Juster margin-bottom hvis nødvendigt */
+    transition: all 0.3s ease; /* Glidende overgangseffekt */
+}
+
+/* Responsiv styling */
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .reverse-layout {
+        margin-top: 580px; /* Flytter hele flexboxen længere ned */
+    }
+    .reverse-layout p {
+        width: 60%; /* Øger bredden på teksten */
+        font-size: 20px; /* Skalerer tekststørrelsen ned */
+        margin-bottom: 30px; /* Justerer margin-bottom */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .reverse-layout {
+        margin-top: 480px; /* Flytter hele flexboxen længere ned på små mobiler */
+    }
+    .reverse-layout p {
+        width: 80%; /* Gør teksten næsten fuldbredde */
+        font-size: 18px; /* Mindre tekststørrelse */
+        margin-bottom: 20px; /* Mindre margin-bottom */
+    }
+}
+
+/* Stil til billed-knappen "Se dyrene" */
+.se_dyrene img {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    margin-top: -60px;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    margin-top: 1050px;
+}
+
+/* Responsiv styling */
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .se_dyrene img{
+        font-size: 14px; /* Endnu mindre tekst */
+        padding: 20px; /* Mindre padding */
+        margin-top: 1435px; /* Flytter knappen endnu længere ned */
+        /* Rykker knappen en smule til venstre */
+        left: 260px; /* Juster denne værdi for mere/mindre forskydning */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .se_dyrene img{
+        font-size: 12px; /* Mindste tekst */
+        padding: 8px 15px; /* Mindre padding */
+        margin-top: 1210px; /* Justerer placering yderligere */
+        width: 30%; /* Gør knappen bredere på små skærme */
+        left: 195px;
+    }
+}
+
+/* Hover-effekt på billed-knappen */
+.se_dyrene img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Sikrer at boksen strækker sig op til bladene */
+.hero-section + .full-width-box {
+    margin-top: -5px; /* Juster denne værdi hvis nødvendigt */
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+    }
+    
+    .section-image,
+    .section-content p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .section-content p {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+
+/* Stil til billed-knappen "Se Åbningstider" */
+.se_åbningstider {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin-top: -60px;
+}
+
+.se_åbningstider img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover-effekt på billed-knappen */
+.se_åbningstider img:hover {
+    transform: scale(1.1);
+}
+
+/* Sektion for nyt billede */
+.overgang {
+    width: 100%;
+    text-align: center; /* Centrerer billedet */
+    margin: 0px 0; /* Lægger lidt afstand omkring billedet */
+}
+
+.overgang {
+    width: 100%; /* Gør billedet responsivt og skalerer det til containerens bredde */
+    max-width: 100%; /* Sætter en maksimal bredde, så billedet ikke bliver for stort på store skærme */
+    height: auto; /* Bevarer billedets højdeforhold */
+}
+
+/* Sektion for nyt billede */
+.new-image-section {
+    width: 100%;
+    text-align: center; /* Centrerer billedet */
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    margin-top: -200px;
+}
+
+.new-image {
+    width: 100%; /* Gør billedet responsivt og skalerer det til containerens bredde */
+    max-width: 1200px; /* Sætter en maksimal bredde, så billedet ikke bliver for stort på store skærme */
+    height: auto; /* Bevarer billedets højdeforhold */
+}
+
+/* Tablets og større mobiler */
+@media (max-width: 768px) {
+    .new-image-section {
+        margin-top: 150px; /* Rykker billedet yderligere ned */
+    }
+    .new-image {
+        max-width: 700px; /* Yderligere skalering af billedet */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .new-image-section {
+        margin-top: 20px; /* Billedet vises lavere på små skærme */
+    }
+    .new-image {
+        max-width: 100%; /* Gør billedet fuldt responsivt */
+        padding: 0 10px; /* Lidt indvendig padding for at undgå at røre skærmkanten */
+    }
+}
+
+/* Footer styling */
+.footer {
+    display: flex; /* Gør footeren til en flex container */
+    justify-content: space-between; /* Placerer sektionerne med lige afstand */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    width: 100%; /* Fylder hele bredden af skærmen */
+    background-color: #EEE7DD; /* Baggrundsfarve */
+    color: rgb(0, 0, 0); /* Tekstfarve */
+    font-family: 'Sigmar', sans-serif;
+    padding: 20px 50px; /* Giver mere padding omkring indholdet */
+    box-sizing: border-box; /* Inkluderer padding i bredden */
+    position: relative;
+    margin-top: 400px; /* Juster marginen for at få footeren til at være længere nede */
+}
+
+/* Styling for de tre sektioner */
+.footer-left {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: left; /* Justerer teksten til venstre */
+    font-size: 22px;
+}
+
+.footer-center {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: center; /* Centrerer teksten */
+    font-size: 22px;
+}
+
+.footer-right {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: right; /* Justerer billedet til højre */
+}
+
+/* Footer-billede */
+.footer-right img {
+    width: 300px; /* Større billede */
+    height: auto; /* Bevarer billedets proportioner */
+    max-width: 100%; /* Sikrer, at billedet ikke overskrider containerens bredde */
+}
+
+/* Giver mere afstand mellem sektionerne */
+.footer > div {
+    padding: 0 20px; /* Tilføjer afstand mellem sektionerne */
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Gør footeren vertikal på mindre skærme */
+        padding: 20px;
+        margin-top: 1200px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: none; /* Fjern flex for at sikre, at sektionerne stables */
+        text-align: center; /* Centrerer teksten */
+        margin-bottom: 15px; /* Lidt afstand mellem sektionerne */
+    }
+
+    .footer-right img {
+        width: 120px; /* Mindre billede på små skærme */
+    }
+}
+
+/* Mobiler */
+@media (max-width: 600px) {
+    .footer {
+        font-size: 14px; /* Juster tekststørrelsen på meget små skærme */
+        margin-top: 700px;
+    }
+}
+
+/* Container styling for at sikre 100% bredde */
+.se_åbningstider-container {
+    width: 100%;
+    overflow: hidden; /* Sørger for, at der ikke opstår scrollbars */
+}
+
+/* Gør billedet responsivt og fylder 100% af containerens bredde */
+.se_åbningstider1 {
+    width: 100%; /* Fylder hele bredden */
+    height: auto; /* Bevarer proportionerne */
+    display: block; /* Fjerner ekstra mellemrum under billedet */
+    margin-top: 0; /* Sørger for, at det starter lige under headeren */
+}
+
+/* Container styling for at sikre 100% bredde */
+.oplevelser_desktop {
+    width: 100%;
+    overflow: hidden; /* Sørger for, at der ikke opstår scrollbars */
+}
+
+/* Gør billedet responsivt og fylder 100% af containerens bredde */
+.oplevelser_desktop {
+    width: 100%; /* Fylder hele bredden */
+    height: auto; /* Bevarer proportionerne */
+    display: block; /* Fjerner ekstra mellemrum under billedet */
+    margin-top: 0; /* Sørger for, at det starter lige under headeren */
+}

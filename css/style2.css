@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+/*
+google fonts sådan
+
+.sigmar-regular {
+  font-family: "Sigmar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* style css computer */
+header {
+    background-color: #20291c;
+    color: white;
+    padding: 30px;
+    height: 25px;
+    position: relative;
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.logo-container img {
+    max-width: 250px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-container img {
+    width: 400px;
+    height: auto;
+}
+
+/* Søgeikon styling */
+.søgeikon {
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    width: 250px;
+}
+
+.søgeikon img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    background-color: #8aa06a;
+}
+
+
+
+/* Stil til Blade2 billede */
+.Blade2 img {
+    width: 100%;
+    position: relative;
+    top: -330px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero sektion styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    font-size: 28px;
+    font-family: "Sigmar", sans-serif;
+    color: white;
+    margin-top: -250px;
+}
+
+.hero-overlay h2 {
+    margin: 0;
+    font-size: 70px;
+    font-family: "Sigmar", sans-serif;
+    line-height: 1.2;
+}
+
+/* Fuldbredde firkant */
+.full-width-box {
+    width: 100%;
+    height: 1000px;
+    background-color: #8aa06a;
+    margin-top: -400px;
+}
+
+/* Stil til billed-knappen "Se Åbningstider" */
+.se_åbningstider {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin-top: -60px;
+}
+
+.se_åbningstider img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover-effekt på billed-knappen */
+.se_åbningstider img:hover {
+    transform: scale(1.1);
+}
+
+.burger {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 40px;
+    font-size: 40px;
+    color: var(--hvid);
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    color: #f6f6f6;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    border: 10px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+    border-radius: 10px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.burger i:hover ul {
+    opacity: 1;
+    transform: all 1s ease;
+}
+
+.dropdown ul li {
+    padding: 5px 40px;
+}
+
+.dropdown ul li a {
+    font-family: "Sigmar", sans-serif;
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.burger:hover .dropdown {
+    display: flex;
+}
+
+.dropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dyrene underside */
+
+.bjørn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 100%;
+}
+
+
+.hero-overlay2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-overlay2 h1 {
+    margin: 0;
+    font-size: 45px;
+    font-family: "Sigmar", sans-serif;
+    color: white;
+    margin-top: -250px;
+}
+
+.hero-overlay2 h2 {
+    margin: 0;
+    font-size: 28px;
+    font-family: "Sigmar", sans-serif;
+    line-height: 1.2;
+}
+
+.section80 h3 {
+    color: white;
+    text-align: center;
+    font-family: "Sigmar", sans-serif;
+    font-size: 38px;
+}
+
+
+.section80 {
+    color: white;
+    text-align: center;
+    font-family: "Sigmar", sans-serif;
+    font-size: 20px;
+    margin: 40px;
+}
+
+.line1{
+padding-left: 150px;
+margin: 25px;
+}
+
+.line2{
+    margin-top: 20px;
+    margin: 25px;
+    padding-left: 150px;
+    }
+
+
+.blade{
+    width: 100%;
+    position: relative;
+    top: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+/* Footer styling */
+.footer {
+    display: flex; /* Gør footeren til en flex container */
+    justify-content: space-between; /* Placerer sektionerne med lige afstand */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    width: 100%; /* Fylder hele bredden af skærmen */
+    background-color: #EEE7DD; /* Baggrundsfarve */
+    color: rgb(0, 0, 0); /* Tekstfarve */
+    font-family: 'Sigmar', sans-serif;
+    padding: 20px 50px; /* Giver mere padding omkring indholdet */
+    box-sizing: border-box; /* Inkluderer padding i bredden */
+    position: relative;
+    margin-top: 0px; /* Juster marginen for at få footeren til at være længere nede */
+}
+
+/* Styling for de tre sektioner */
+.footer-left {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: left; /* Justerer teksten til venstre */
+    font-size: 22px;
+}
+
+.footer-center {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: center; /* Centrerer teksten */
+    font-size: 22px;
+}
+
+.footer-right {
+    flex: 1; /* Fylder tilgængelig plads */
+    text-align: right; /* Justerer billedet til højre */
+}
+
+/* Footer-billede */
+.footer-right img {
+    width: 300px; /* Større billede */
+    height: auto; /* Bevarer billedets proportioner */
+    max-width: 100%; /* Sikrer, at billedet ikke overskrider containerens bredde */
+}
+
+/* Giver mere afstand mellem sektionerne */
+.footer > div {
+    padding: 0 20px; /* Tilføjer afstand mellem sektionerne */
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+/* Logo styling */
+.logo-container {
+    position: relative;
+    top: -20px;
+    left: 33%;
+    width: 200px;
+}
+
+.logo-container img {
+    width: 200px;
+    height: auto;
+}
+
+    .footer-left, .footer-center, .footer-right {
+        flex: none; 
+        text-align: center; 
+        margin-bottom: 15px; 
+    }
+
+    .footer-right img {
+        width: 120px; 
+    }
+
+    .Blade2 img {
+        width: 100%;
+        position: relative;
+        top: -700px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        font-size: 14px; 
+    }
+
+    .logo-container {
+        position: relative;
+        top: 70px;
+        left: 12%;
+        width: 200px;
+    }
+    
+    .logo-container img {
+        width: 400px;
+        height: auto;
+    }
+
+    .Blade2 img {
+        width: 100%;
+        position: relative;
+        top: -750px;
+        margin: 0;
+        padding: 0;
+    }
+  
+}
+
+.line1 :hover {
+cursor: pointer;
+scale: 1.1;
+}
+
+.line2 :hover {
+    cursor: pointer;
+    scale: 1.1;
+    }
